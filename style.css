@@ -56,13 +56,13 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  grid-template-rows: repeat(5, 70px);
-  grid-template-columns: repeat(5, 70px);
+  grid-template-rows: repeat(5, 40px);
+  grid-template-columns: repeat(5, 40px);
 }
 
 .pixel {
-  height: 70px;
-  width: 70px;
+  height: 40px;
+  width: 40px;
   border: 1px solid black;
   background-color: white;
 }
