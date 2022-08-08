@@ -19,15 +19,3 @@ function addEvento() {
     cores[i].addEventListener('click', addSelect);
   }
 }
-
-function aplicaCor(e) {
-  if (e.target.classList === 'pixel') {
-    const cor = document.querySelector('.selected').style.backgroundColor;
-    e.target.style.backgroundColor = cor;
-  }
-}
-
-window.onload = function janela() {
-  addEvento();
-  pixelBoard.addEventListener('click', aplicaCor);
-};
