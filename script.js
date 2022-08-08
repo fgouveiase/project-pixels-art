@@ -7,10 +7,8 @@ function removeSelect() {
   }
 }
 
-function addSelect() {
-  for (let i = 0; i < cores.length; i += 1) {
-    cores[i].classList.add('selected');
-  }
+function addSelect(e) {
+  e.target.classList.add('selected');
 }
 
 function addEvento() {
@@ -19,3 +17,4 @@ function addEvento() {
     cores[i].addEventListener('click', addSelect);
   }
 }
+addEvento();
