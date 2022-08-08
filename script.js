@@ -17,13 +17,16 @@ for (i = 0; i < cores.length; i += 1) {
   cores[i].addEventListener('click', addSelect);
 }
 
-function corSelecionada(event) {
-  const corSelecionada = document.querySelector('.selected');
-  event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
+function aplicaCor(event) {
+  if (event.target.classList.contains.pixels) {
+    const cor = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = cor;
+  }
 }
 
-function aplicaCor() {
-  pixelBoard.addEventListener('click', corSelecionada);
-}
-
-aplicaCor();
+window.onload = function () {
+  for (i = 0; i < cores.length; i += 1) {
+    cores[i].addEventListener('click', addSelect);
+    pixelBoard.addEventListener('click', aplicaCor);
+  }
+};
