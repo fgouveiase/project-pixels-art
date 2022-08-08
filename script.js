@@ -1,5 +1,4 @@
 const cores = document.querySelectorAll('.color');
-const pixelBoard = document.getElementById('#pixel-board');
 
 function removeSelect() {
   for (let i = 0; i < cores.length; i += 1) {
@@ -18,3 +17,13 @@ function addEvento() {
   }
 }
 addEvento();
+
+function pintar(e) {
+  const pixelSelect = e.target;
+  const colorSelect = document.querySelector('.selected');
+  const cor = getComputedStyle(colorSelect).backgroundColor;
+  pixelSelect.style.backgroundColor = cor;
+}
+
+const selectColor = document.querySelector('#pixel-board');
+selectColor.addEventListener('click', pintar);
